@@ -75,11 +75,21 @@ function startTimer() {
     if (second > 9) {
         secondEl.innerText = second + ':';
     }
-    if (second > 60) {
+    if (second > 59) {
         minute++;
         minuteEl.innerText = '0' + minute + ':';
         second = 0;
         secondEl.innerText = '0' + second;
+    }
+
+    //MINUTE
+
+    if (minute < 9) {
+        minuteEl.innerText = '0' + minute + ':';
+    }
+
+    if (minute > 9) {
+        minuteEl.innerText = minute + ':';
     }
 
 }
