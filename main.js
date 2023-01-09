@@ -5,6 +5,19 @@ const millisecondEl = document.querySelector('.millisecond');
 const buttonStart = document.querySelector('.button_Start');
 const buttonStop = document.querySelector('.button_Stop');
 const buttonPause = document.querySelector('.button_Pause');
+const buttonSave = document.querySelector('.button_Save');
+
+
+
+
+buttonSave.addEventListener('click', () => {
+    clearInterval(interval);
+    const results = document.querySelector('.results_out');
+    const block = document.createElement('div');
+    block.innerText = `Results: ${minute}:${second}:${millisecond}`;
+    results.append(block);
+
+});
 
 buttonStart.addEventListener('click', () => {
     clearInterval(interval);
@@ -49,7 +62,8 @@ document.onkeypress = function (event) {
 let minute = 00,
     second = 00,
     millisecond = 00,
-    interval;
+    interval,
+    disabled = true;
 
 function startTimer() {
     millisecond++;
@@ -93,3 +107,4 @@ function startTimer() {
     }
 
 }
+

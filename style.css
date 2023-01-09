@@ -49,7 +49,7 @@ body {
 
 
 .button_section {
-  width: 500px;
+  width: 700px;
   display: flex;
   justify-content: space-between;
 }
@@ -80,4 +80,38 @@ body {
 .button_Stop:hover {
   cursor: pointer;
   background-color: rgb(203, 0, 0);
+}
+
+.button_Save:hover {
+  cursor: pointer;
+  background-color: rgb(0, 7, 218);
+}
+
+
+.results {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.results_block {
+  padding: 20px;
+  background-color: #333;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.results_block_title {
+  color: azure;
+  font-size: 20px;
+}
+
+.results_out {
+  color: azure;
+  padding: 10px 0px;
 }
